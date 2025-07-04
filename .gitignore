@@ -1,0 +1,22 @@
+# Environnement virtuel
+.venv/
+venv/
+env/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Fichiers temporaires
+*.log
+*.tmp
+*.swp
+*.bak
+
+# VS Code
+.vscode/
+
+# Fichiers de config/données
+.env
+*.sqlite3
