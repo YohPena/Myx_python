@@ -2,7 +2,7 @@ from fonctions import *
 
 def main():
     print("Bonjour, projet Python bien initialisé ! 🚀")
-    
+    save_prime(1000)
     # Exemple d'utilisation des fonctions importées automatiquement
     print("5 + 3 =", addition(5, 3))
 
