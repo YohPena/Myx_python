@@ -1,3 +1,4 @@
+from .registry import all_definitions
 from fonctions import give_id  # ta fonction d'ID unique
 
 class Definition:
@@ -17,10 +18,7 @@ class Definition:
         self.enfants = []  # les objets qui découleront de cet axiome
         self.liens = []    # liste d'objets Lien
 
-    def ajouter_enfant(self, enfant):
-        lien = Lien(parent=self, enfant=enfant)
-        self.liens.append(lien)
-        enfant.liens.append(lien)
+        all_definitions.append(self)
         
     def __repr__(self):
         return (f"Definition(id={self.id}, nom='{self.nom}', "

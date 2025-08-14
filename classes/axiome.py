@@ -1,3 +1,4 @@
+from .registry import all_axiomes
 from fonctions.give_id import give_id  # Génère un ID unique (nombre premier)
 
 class Axiome:
@@ -17,10 +18,7 @@ class Axiome:
         self.enfants = []  # les objets qui découleront de cet axiome
         self.liens = []    # liste d'objets Lien
 
-    def ajouter_enfant(self, enfant):
-        lien = Lien(parent=self, enfant=enfant)
-        self.liens.append(lien)
-        enfant.liens.append(lien)
+        all_axiomes.append(self)
         
     def __repr__(self):
         return (f"<Axiome id={self.id}, nom='{self.nom}', "

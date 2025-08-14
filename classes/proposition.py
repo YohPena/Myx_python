@@ -1,3 +1,4 @@
+from .registry import all_propositions
 from classes.lien import Lien
 from fonctions import give_id, create_link
 
@@ -24,6 +25,8 @@ class Proposition:
         self.liens = []
         for p in parents:
             create_link(p, self)  # met à jour parent.liens, self.liens et parent.enfants
+
+        all_propositions.append(self)
 
     def __repr__(self):
         return f"<Proposition {self.nom} id={self.id} force={self.force:.2f} liens={len(self.liens)}>"

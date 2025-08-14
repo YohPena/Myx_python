@@ -1,7 +1,7 @@
 # fonctions/links_utils.py
 from classes.lien import Lien
 
-def create_link(parent, child, link_type="base"):
+def create_link(parent, child, type_lien="relation"):
     """
     Crée un lien entre un parent et un enfant.
 
@@ -11,7 +11,7 @@ def create_link(parent, child, link_type="base"):
         link_type: type de lien (par défaut 'base')
     """
     # Crée le lien
-    link = Lien(parent=parent, enfant=child, type_lien=link_type)
+    link = Lien(parent=parent, enfant=child, type_lien=type_lien)
     
     # Ajoute le lien aux listes de liens des deux objets
     parent.liens.append(link)
